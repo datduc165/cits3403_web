@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style1.css">
+    <title>JavaScript Page</title>
+    
+</head>
+<body>
+    <header>
+        <p class="logo" >MidSemProject</p>
+    <div>
+    <nav>
+        <ul>
+            <li><a href="HTML.html">HTML</a></li>
+            <li><a href="CSS.html">CSS</a></li>
+            <li><a href="JS.html">JavaScript</a></li>
+            <li><a href="About.html">About</a></li>
+        </ul>
+    </nav>
+    </div>
+</header>
+<main>
+    <section class="banner">
+        <img src="../CSS/theme_6.jpg" alt="theme">
+        <h2 class="slider">
+            WELCOME TO WEB<br>PROJECT
+        </h2>
+    </section>
+    <div class="wrapper">
+       <div class="table_content">
+           <p>Table of content</p>
+           <ul>
+               <li><a href=#1_JS_background>1. JavaScript history and evolution</a></li>
+               <li><a href=#2_JS_statement>2. JavaScript statment</a></li>
+              
+                    <li><a href=#2.1_operator>2.1 JavaScript Operators</a></li>
+                    <li><a href=#2.2_data_type>2.2 Data type</a></li>
+               
+               <li><a href=#3_Add_JS>3. Add JavaScript</a></li>
+               <li><a href=#4_JS_DOM>4. JavaScript & HTML DOM</a></li>
+               
+                    <li><a href=#4.1_DOM>4.1 DOM</a></li>
+                    <li><a href=#4.2_DOM_Navigation>4.2 DOM Navigation</a></li>
+            
+            <li><a href=#5_JS_Ajax>5. JavaScript AJAX</a></li>
+            <li><a href=#6_Summary>6. Summary</a></li>
+           </ul>
+        </div>
+
+        <section class="text">
+            <h2 id="1_JS_background">1.JavaScript history and evolution</h2>
+            <p>Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web in order to create a web page. JavaScript is a scripting or programming language that allows you to implement complex behaviors on web page such as dynamic function or update, control multi-media, animate image and many or things.</p>
+            <p>JavaScript was invented by Brendan Eich in 1995 while in Netscape, and became an ECMA standard in 1997.
+                ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.
+            </p>
+            <ul class="custom_list">
+                <li>In November 1996, Netscape submitted JavaScript to ECMA International. Then the official release of the first ECMAScript language specification in June 1997. Then the new release of ECMAScript 2 in June 1998 and ECMAScript 3 in December 1999. ECMAScript 4 was began in 2000 but never released.</li>
+                <li>In 2008, Google introduced Chrome browser, with the V8 JavaScript engine allowing significantly improvement of execution times. This pushed other languages forward in early 2009. In December 2009, the ECMAScript 5 was released .</li>
+                <li>With the ambitious for the better of the language, in 2015, ECMAScript 6 was publiced with an extensive collection of additions.</li>
+                <li>From 2016 to 2019, there was new version each year but with smaller amout of changes.</li>
+            </ul>
+            <hr>
+            <h2 id="2_JS_statement">2.JavaScript statment</h2>
+                <p>Since JavaScript is a programming language, it has instructions to be followed to execute the code. These programming instructions are statments in JavaScript. In order to seperate each statement, a semi-colon is appended at the end of the statment.</p>
+                <div class="example">
+                    <p>Examples of JavaScript statment for declaring variable. </p>
+                    <pre>var a; //<i>Variable declaration with var keywork.</i></pre>      
+                    <pre>let b; //<i>Variable declaration with let keywork.</i></pre>
+                    <pre>const c; //<i>Variable declaration with const keywork.</i></pre>
+                    <p>Note: JavaScript ignore white spaces so that you can add more white space to make your code readable.</p>
+                </div>
+            <h4 id="2.1_operator">2.1 JavaScript Operators</h4>
+                <p>In JavaScript, variables are used to store data values. After declaring a variable, an equal sign (=) is used to assign values to variable or we can declare and assgin value to variable at the same line.</p>
+                <div class="example">
+<pre>var x;
+x = 9;//<i>assgin the value 9 to x.</i>
+var a = "text";//<i>declare and assgin "text" to a.</i></pre>
+                </div>
+                <p>JavaScript also use arithmetic operators (+,-,*,/) to compute values</p>
+                <div class="example">
+<pre>var x = 1 + 1;//<i>assign the result of the computation to x</i></pre>
+                </div>
+                <p>With different value type of variable, the operators treat differently.</p>
+                <div class="example">
+<pre>fname = "Joe";
+lname = "Lora";
+x = fname + " " +lname; </pre>
+                    <p>The result of x will be "Joe Lora". The "+" operator in this case concentrate the strings.</p>
+                </div>
+            <h4 id="2.2_data_type">2.2 Data type</h4>
+                <p>
+                    Data type of JavaScript variable can be a number, a string, a object and more.
+                </p>
+                <div class="example">
+<pre>var length = 16; //<i>Number</i>
+var lastName = "Johnson"; // <i>String</i>
+var x = {firstName:"Joe", lastName:"Lora"}; // <i>Object</i></pre>
+                    <p>Note: Variables in JavaScript are dynamic which means it a variable can hold different data type.</p>
+<pre>var x;//<i>x is undefined</i>
+x = 5; //<i> x is a number</i>
+x = "God"; //<i> x is a string</i></pre>
+                </div>
+                <p>With data type in JavaScript, it can even compute two different data types.</p>
+                <div class="example">
+<pre>var a = 1 + "Home";</pre>
+                    <p>The result of above code is "1Home" because JavaScript treats number in this case as string. Moreover, JavaScript evalutes from left to right therefore, different sequences have different result.</p>
+<pre>var a = 1 + 2 +"Home";</pre>
+                    <p>After execution, JavaScript will add 1 and 2 and then concentrate it to string "Home" result in "3Home".</p>
+                </div>
+                <hr>
+            <h2 id="3_Add_JS">3.Add JavaScript</h2>
+                <p>There are several ways to add JavaScript. In HTML, JavaScript is placed inside &lt;script&gt; and &lt;/script&gt;. Everything inside it is executed whenever the HTML web page is loaded. JavaScript can be in &lt;head&gt; or &lt;body&gt; section of HTML or in both sections.</p>
+                <div class="example">
+                    <p>Example of JavaScript in the body section.</p>
+<pre>&lt;body&gt;
+    &lt;p id=&quot;text_example&quot;&gt;&lt;/p&gt;
+    &lt;button type=&quot;button&quot; onclick=&quot;changeText()&quot;&gt;Let's try&lt;/button&gt;
+    &lt;script&gt;
+        function changeText() 
+            {document.getElementById(&quot;text_example&quot;).innerHTML = &quot;Text changed.&quot;;}
+    &lt;/script&gt;
+    &lt;/body&gt;
+</pre>
+                    <p id="text_example"></p>
+                    <button class="button" type="button" onclick="changeText()">Let's try</button>
+                    <p>By clicking the button, it loads the JavaScript function(changeText) and change the HTML content of element that has id equal to &quot;text_example&quot;.</p>
+                    <p>Note: JavaScript section is recommended to place in the body section before the &lt;/body&gt; tag in order to improve the display speed. Moreover, HTML page laods from top to bottom, therefore, some HTML elements won't be available yet to be affected.</p>
+                </div>
+                <p>Another way to add JavaScript is to add a link to the JavaScript file.</p>
+                <div class="example">
+                    <p>For example, a seperate JavaScript file is used in this project</p>
+<pre>&lt;script src=&quot;../JavaScript/app.js&quot;&gt;&lt;/script&gt;</pre>
+                    <p>This will load all the JavaScript code in the file and manipulate the HTML page. This way allows developers to read and change the code easily.</p>
+                </div>
+                <p>Beside that, JavaScript file can be loaded from third-site parties using the URL reference.</p>
+                <div class="example">
+<pre>&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js&quot; integrity=&quot;sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js&quot; integrity=&quot;sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</pre>
+            
+                    <p>In this project two JavaScript files are loaded from a third-site party (<a class="link" href="https://cdnjs.com/libraries/gsap/2.1.3">CDNJS web page</a>) in order to add the animation for the banner of this project. After empployed, all the function in those JavaScript files can be declared and used in our main JavaScript file.</p>
+                </div>
+            <hr>
+            <h2 id="4_JS_DOM">4. JavaScript & HTML DOM</h2>
+                <p>HTML DOM stands for Document Object Model of the page. It represents the web page so that it can be accessed and manipulated by programming language such as JavaScript.</p>
+           
+            <h4 id="4.1_DOM">4.1 DOM</h4>
+                <p>JavaScript can get all the HTML elements or attributes or CSS selector using method.</p>
+                <div class="example">
+                    <p>Recall the example above.</p>
+<pre>&lt;body&gt;
+    &lt;p id=&quot;text_example&quot;&gt;&lt;/p&gt;
+    &lt;button type=&quot;button&quot; onclick=&quot;changeText()&quot;&gt;Let's try&lt;/button&gt;
+    &lt;script&gt;
+        function changeText() 
+            {document.getElementById(&quot;text_example&quot;).innerHTML = &quot;Text changed.&quot;;}
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>  
+                    <p>A function <i>changeText</i> is declared and assigned as an event whenever the button is clicked.<i>document.getElementById</i> is the method which get a HTML element that have id = "text_example" and <i>innerHTML</i> is called the property of that method which can change or set the content of the element.</p>
+                </div>
+                <p>There are several ways to find HTML elements or CSS selector</p>
+                <ul>
+                    <li>document.getElementById(id) - <i>get element by id</i></li>
+                    <li>document.getElementsByTagName(name) - <i>get elements by HTML tag name</i></li>
+                    <li>document.getElementsByClassName(name) - <i>get elements by class name</i></li>
+                    <li>document.querySelector(name) - <i>get a CSS selector whether by HTML element name or by class name(.class) or by id name(#id)</i></li>
+                </ul>
+            <div class="example">
+                <p>The follow JavaScript code is used in this project to make the effect of the above banner.</p>
+<pre>const ban = document.querySelector(".banner");
+const tl = new TimelineMax();
+tl.fromTo(ban,1.5,{width:"0%"},{width:"100%"}</pre>
+            <p>The first variable is declared and assigned with the return result of <i>document.querySelector(".banner")</i>. If there is no selector that have a class name of "banner", a null value is stored in variable <i>ban</i>. Meanwhile, the second variable is declared to store a new function of <i>TimelineMax()</i> which is employed from a third-site party (<a class="link" href="https://cdnjs.com/libraries/gsap/2.1.3">CDNJS web page</a>).</p>    
+            <p>The <i>tl</i> variable is then used to set the animation of the banner which is stored in <i>ban</i> variable. This function of <i>tl</i> allows the banner of this project to change its width from 0% to 100% in 1.5 second.</p>
+            <p>Note: querySelector and getElementById only return the first result in case there are more than one result.  Other methods return a collection of results. Navigation between HTML elements is explained <a class=link href=#4.2_DOM_Navigation>here</a>.</p>
+            </div>
+            <p>Beside changing the content of HTML elements with <i>innerHTML</i>, we can change the attribute or style of the elements.</p>
+            <ul>
+                <li>element.<i>attribute</i>attribute = new value OR element.setAttribute(attribute, value) - <i>Change the attribute value of an HTML element</i></li>
+                <li>element.style.<i>property</i> = new style - <i>Change the style of an HTML element</i></li>
+            </ul>
+            <div class="example">
+                <p>The following is a simple feature that allows the user to change the background color using what was stated above.</p>
+<pre>&lt;!--HTML part--&gt;
+    &lt;input id=&quot;BGcolor&quot;&gt;
+    &lt;button class=&quot;button&quot; type=&quot;button&quot; onclick=&quot;ChangeBGColor()&quot;&gt;Change&lt;/button&gt;
+    &lt;button class=&quot;button&quot; type=&quot;button&quot; onclick=&quot;ResetBGColor()&quot;&gt;Reset&lt;/button&gt;
+&lt;!--HTML part--&gt;
+/*JavaScript part*/
+function ChangeBGColor() {
+    var x;
+    x = document.getElementById("BGcolor").value;
+    document.querySelector("body").style.backgroundColor = x;
+  } 
+  function ResetBGColor() {
+    document.querySelector("body").style.backgroundColor = "";
+  }</pre>
+                <input id="BGcolor">
+                <button class="button" type="button" onclick="ChangeBGColor()">Change</button>
+                <button class="button" type="button" onclick="ResetBGColor()">Reset</button>
+                <p>The first JavaScript function gets the input color value with <i>getElementById("BGcolor")</i>> and assgin its value to variable <i>x</i> using the property <i>.value</i>. Then, we find the body selector in CSS using <i>document.querySelector("body")</i> and set its background color with the input color (<i>document.querySelector("body").style.backgroundColor = x</i>).</p>
+            </div>
+            <h4 id="4.2_DOM_Navigation">4.2 DOM Navigation</h4>
+                <div class="image_container"><p>HTML DOM Tree</p><a href="https://www.w3schools.com/js/js_htmldom.asp"><img src="../CSS/DOM_tree.gif" title="w3schools" alt="DOM_tree"></a></div>
+                <p>With HTML DOM, everythins in HTML page is known as a node that follows parent-relationship. The above image demonstrates a relationship tree of HTML elements and attributes which can be access by JavaScript.</p>
+                <p>From the above image, &lt;html&gt; is known as a root node that is the parent of &lt;head&gt; and  &lt;body&gt;. Therefore, &lt;head&gt; is known as the first child and &lt;body&gt; is the last child of &lt;html&gt;</p>
+                <p>Using parent-child relationship, JavaScript can navigate to get the right node.</p>
+                <div class="example">
+                
+<pre>&lt;script&gt;
+    const y = document.getElementById(&quot;source&quot;);
+    document.getElementById(&quot;here&quot;).innerHTML = y.firstChild.nodeValue;
+&lt;/script&gt;</pre>
+                    <p>Using the above JavaScript, it will get the <i>nodeValue</i> of HTML element that has id="source" and then assigns it to HTML element that has id="here". The result is the two same texts.</p>
+                    
+                    <p id="source">Here is some text.</p>
+                    <p id="here"></p>
+                    <p>Note: <i>y.firstChild.nodeValue</i> is the same as <i>y.childNodes[0].nodeValue</i></p>
+                </div>
+            <hr>
+            <h2 id="5_JS_Ajax"> 5. JavaScript AJAX</h2>
+                <p>AJAX stands for Asynchronous JavaScript And XML. It is a techniqure that allows web page to load new data from a web server without reloading a whole page. In AJAX, XMLHttpRequest object is the keystone. The following example will explain how AJAX work in order to get data from web server.</p>
+                <div class="example">
+<pre>/*JavaScript-AJAX part*/
+    function load(url, cFunction) {
+    var xhttp;
+    xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        cFunction(this);
+        }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+    }
+    function change(xhttp) {
+    document.getElementById("ajax_text").innerHTML = xhttp.responseText;
+    }
+ /*HTML part*/   
+    &lt;p id=&quot;ajax_text&quot;&gt;&lt;/p&gt;
+    &lt;button class=&quot;button&quot; onclick=&quot;load('ajax_text.txt', change)&quot;&gt;Click&lt;/button&gt;</pre>
+
+                <p id="ajax_text"></p>
+                <button class="button" onclick="load('ajax_text.txt', change)">Click</button>
+                <p><i>XMLHttpRequest()</i> is declared to exchange data with a server. Then using the onreadystatechange Property to know when a function need to be executed when the <i>readyState</i> changes. The <i>status</i> property holds the status of the XMLHttpRequest object to know whether the page is "200-OK" or "400-Page not found and so on.</p>
+                <p><i>xhttp.open("GET", url, true)</i> specifies a "GEt" request to get the data using the given "url". The "true" value is a boolean parameter which defines whether or not to perform the operation asynchrinously. With "true" value, <i>xhttp.send()</i> method returns as soon as the request is sent.</p>   
+                <p>After receiving the result, <i>change()</i> find the element with id ="ajax_text" to assgin the result.</p>
+                <p>Note: the url, "ajax_text.txt", is the placed inside the same folder for this example.</p>
+            </div>
+            <hr>
+           
+            <h2 id="6_Summary"> 6. Summary</h2>
+                <p>JavaScript is a such a powerful programming language that allow a dynamic web site. Beside, it can help to exchange data with a server using AJAX with reload the whole page. This web project only demonstrate some of the main cores of JavaScript as example to guide everyone. There are many other strengths of JavaScript that are covered or fully covered in this project which can be found at <a class="link" href="https://www.w3schools.com/">W3 school</a>.</p>
+        </section>
+    </div> 
+</main>
+<div class="wrapper">
+    <footer >
+        @2020 Mid Sem Project<br>
+        Daniel Nguyen
+    </footer>
+</div>   
+<!--JS for the example in section 3 -->
+<script>
+    function changeText() 
+        {document.getElementById("text_example").innerHTML = "Text changed.";}
+</script>
+<!--JS for the example in section 4.2-->
+<script>
+    const y = document.getElementById("source");
+    document.getElementById("here").innerHTML = y.firstChild.nodeValue;
+</script>
+<!--JS for the project-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+    
+<script src="../JavaScript/app.js"></script>
+    
+</body>
+</html>

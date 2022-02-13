@@ -1,0 +1,37 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - CITS3403</title>
+      {% else %}
+      <title>Welcome to CITS3403</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>CITS3403: 
+          <a href="{{ url_for('index') }}">Home</a>
+          <a href="{{ url_for('test') }}">Test</a>
+          {% if current_user.is_anonymous %}
+          <a href="{{ url_for('login') }}">Login</a>
+          {% else %}
+          <a href="{{ url_for('logout') }}">Logout</a>
+          <a href="{{ url_for('user') }}">View User</a>
+          {% endif %}
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+        <!--I used the "block" control statement to define the place where the derived templates can insert themselves-->
+    
+    
+
+      </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script>
+        var mp = {
+            ' him ': ' them ', ' her ': ' them ', ' he ': ' they ',
+            ' she ': ' they ', ' his ': ' their ', ' her ': ' their '
+        }
+        function subs(obj) {
+            return function (str) {
+                var props = Object.keys(obj);
+                console.log(str);
+                for (var i = 0; i < props.length; i++) {
+                    var pattern = new RegExp(props[i], 'ig');
+                    str = str.replace(pattern, obj[props[i]]);
+                }
+                return str;
+            };
+        }
+        function update() {
+            var elems = document.getElementsByTagName('*');
+            var f = subs(mp);
+            //console.log(elems[0].innerHTML);
+            console.log(f);
+            console.log(f(elems[0].innerHTML));
+            
+           // for (var i = 0; i < elems.length; i++) {
+          //      elems[i].innerHTML = f(elems[i].innerHTML);
+         //   }
+        }
+    </script>
+</head>
+
+<body onload='update()'>
+    <h1> He Mourned His Master, Henry Lawson, 1890</h1>
+    The theme is ancient as the hills,<br>
+    With all their prehistoric glory;<br>
+    But yet of Corney and his friend,<br>
+    We've often longed to tell the story;<br>
+    And should we jar the reader's ear,<br>
+    Or fail to please his eye observant,<br>
+    We only trust that he'll forgive<br>
+    The bush muse and, your humble servant... <br>
+</body>

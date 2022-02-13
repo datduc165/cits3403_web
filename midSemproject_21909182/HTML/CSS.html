@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style1.css">
+    <title>CSS Page</title>
+    <!--style here is for the example in section 3-->
+    <style>
+        h1 {
+          color: orange;
+        }
+    </style>
+</head>
+<body> 
+    <header>
+        <p class="logo" >MidSemProject</p>
+    <nav>
+        <ul>
+            <li><a href="HTML.html">HTML</a></li>
+            <li><a href="CSS.html">CSS</a></li>
+            <li><a href="JS.html">JavaScript</a></li>
+            <li><a href="About.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="banner">
+        <img src="../CSS/theme_6.jpg" alt="theme">
+       
+        <h2 class="slider">
+            WELCOME TO WEB<br>PROJECT
+        </h2>
+    </section>
+
+    <div class="wrapper">
+        <div class="table_content">
+            <p>Table of content</p>
+            <ul>
+                <li><a href=#1_CSS_background>1. Cascading Style Sheets (CSS) history and evolution</a></li>
+                <li><a href=#2_CSS_syntax>2. CSS syntax</a></li>
+                <li><a href=#2.1_Universal_Selector>2.1 Universal Selector</a></li>
+                <li><a href=#3_Add_CSS>3. Add CSS</a></li>
+                <li><a href=#4_CSS_layout>4. CSS layout</a></li>
+                <li><a href=#5_CSS_Pseudo_class>5 CSS Pseudo class</a></li>
+            </ul>
+        </div>
+ 
+        <section class="text">
+            <h2 id="1_CSS_background">1. Cascading Style Sheets (CSS) history and evolution</h2>
+                <p>CSS is a style sheet language which supports the styling of the document written by HTML or any other markup languages. CSS defines the presentation of content including colors, layout, and fonts. The firt CSS was proposed by Håkon Wium Lie in 1994. Realizing the important and strenght of styling language, he and Tim Berners-Lee introduced to public CSS1 in 1996 and soon it became a W3 recommendation for styling web page. As HTML grew, CSS became wider with variety version to meet the demand of web developers for demonstration.</p>
+                <ul class="custom_list">
+                    <li>CSS 1 The first CSS specification to become an official W3C Recommendation is CSS level 1, published on December 17, 1996. Håkon Wium Lie and Bert Bos are credited as the original developers.</li>
+                    <li>CSS level 2 specification was developed by the W3C and published as a recommendation in May 1998. A superset of CSS 1, CSS 2 includes a number of new capabilities</li>
+                    <li>CSS level 2 revision 1, often referred to as "CSS 2.1", fixes errors in CSS 2, removes poorly supported or not fully interoperable features and adds already implemented browser extensions to the specification.</li>
+                    <li>Unlike CSS 2, which is a large single specification defining various features, CSS 3 is divided into several separate documents called "modules". Each module adds new capabilities or extends features defined in CSS 2, preserving backward compatibility. Work on CSS level 3 started around the time of publication of the original CSS 2 recommendation. The earliest CSS 3 drafts were published in June 1999.</li>
+                </ul>
+                <hr>
+            <h2 id="2_CSS_syntax">2. CSS syntax</h2>
+                <p>A CSS rule-set consists of a selector and a declaration block:</p>
+                <div class="example">
+                
+    <pre>body {
+    font-family: "Century Gothic";<br>
+    font-size: 105%;
+    }</pre>
+
+                    <p>The "body" is known as the selector which is be pointed to HTML element for styling and everything inside curly brackets is know as the declaration which defines the style of selected element ("body"). "font-family" and "font-size" in this example are the properties.</p>
+                    <p>"Century Gothic" and "105%" are the assigned value of the properties.</p>   
+                </div>
+                <p>In CSS, selector can be the element name, class name or id name in HTML.</p>
+                <div class="example">
+<pre>
+.text {
+    padding:0 10px;
+}
+</pre>
+                <p>
+                    example with class name ("text").</p>
+<pre>
+#special {
+    color:red;
+}
+</pre>
+                <p>example id name ("special").</p>
+                </div>
+                <p> Spacing in CSS is not matter.</p>
+                <div class="example">
+<pre>p{font-size:20px;font-family:"Century Gothic";}</pre>
+                <p>is the same as:</p>
+<pre>p {
+    font-size: 20px;
+    font-family:"Century Gothic";
+}</pre>  
+                </div>
+       
+                <p>In CSS, selectors can be grouped in order to use one specific style for many selectors.</p>
+                <div class="example">
+<pre>h1, h2, p {
+        text-align: center;
+        color: red;
+        }
+</pre>
+                <p>In this example, all three HTML elements h1, h2 and p are the selector in CSS and they all have color red for the content and the content is aligned at the center.</p>
+
+                </div>
+            <h4 id="2.1_Universal_Selector">2.1 Universal Selector</h4>
+                <p>There is a tree relation of HTML that selector in CSS follows, this tree defines the parent relationship between HTML elements.</p>
+                <div class="example">
+<pre>header nav ul li a {
+    font-family: Arial;
+    text-transform: Uppercase;
+}</pre>
+                    <p>In HTML, elements can be nested. From a the above CSS code of this project, we can understand that CSS try to find nested &lt;a&gt; elements such as the following HTML code to apply the presentation style for the content.</p>
+<pre>
+&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a&gt;
+                ...
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+</pre>
+                </div>
+            <hr>
+            <h2 id="3_Add_CSS">3.Add CSS</h2>
+                <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</p>
+                <p>There are three ways to add CSS:</p>
+            
+                    <h4>Internal</h4>
+                    <div class="example">
+                        
+                        <p>The internal style is defined inside the &lt;style&gt; element, inside the &lt;head&gt; section.</p>
+<pre>
+&lt;head&gt;
+    &lt;style&gt;
+    body {
+        background-color: red;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+</pre>
+                        <p>This would allow CSS to style the background-color of &lt;body&gt; element in HTML to have red color.</p>
+                    </div>
+                    <h4>Inline</h4>
+                    <div class="example">
+                        <p>
+                            Recall from style attribute in HTML, inline styles is used by adding the style attribute to the relevant element. The style attribute can contain any CSS property.
+
+                        </p>
+                        <pre>&lt;p style = &quot;color:maroon;font-size:25px&quot; &gt; Result: This text is style with style attribute&lt;/p&gt;</pre>
+                        <p style="color:maroon;font-size:25px">Result: This text is style with style attribute</p>
+                        <p>
+                            The style attribute above is declared to make the content of that specific &lt;p&gt; element has maroon color for the text and a font-size of 25px.
+                        </p>
+        
+                    </div>
+                    <h4>External</h4>
+                    <div class="example">
+                        
+                        <p> In this project, HTML page include a reference to the external CSS file so that the entire of web page can be changed in just one file.</p>
+<pre> &lt;link rel=&quot;stylesheet&quot; href=&quot;../CSS/style1.css&quot;&gt;</pre>
+                        <p>By using the &lt;link&gt; element inside the &lt;head&gt; element, we can add an relative link of CSS file in HTML page. </p>
+                    </div>
+            
+                    <p>If there are external CSS and internal CSS in HTML page and at the same section, the HTML page will read the style from top to bottom and apply the style in order. Look at the below example.</p>
+                    <div class="example">
+            
+
+<pre>
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../CSS/style1.css&quot;&gt;
+    &lt;style&gt;
+    h1 {
+        color: orange;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is an example1&lt;/h1&gt;
+&lt;/body&gt;
+</pre>
+                        <p>Output:</p>
+                        <h1>This is an example1</h1>
+
+                        <p>In this example HTML reads  all style applications first, and the final style is to apply orange color to the content of h1 element. Therefore, h1 content is always orange despite the position of h1 in HTML page.</p>
+                        <p>If there is inline style in the above example:</p> 
+                        <pre>&lt;h1 style=&quot;color:red&quot;&gt;This is an example2&lt;/h1&gt;</pre>
+                        <p>Then the output:</p> <h1 style="color:red">This is an example2</h1> 
+                        <p>The above style will not affect this &lt;h1&gt; element because it have the final as red color.</p>
+        
+                    </div>    
+    <hr>
+    <h2 id="4_CSS_layout">4.CSS layout</h2>
+        <p>CSS decides the presentation of the HTML element and by the mean of presentation, it is able to style the layout of a element. In HTML elements are inside boxes including margins, borders, padding, and the actual content and CSS is able to style those "boxes" to meet the demand of creator.</p>
+        <div class="example">
+<pre>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;HTML.html&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;CSS.html&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;JS.html&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#About&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+            <p>By default the navigation will have a default like this:</p>
+            <nav>
+                <ul>
+                    <li><a href="HTML.html">HTML</a></li>
+                    <li><a href="CSS.html">CSS</a></li>
+                    <li><a href="JS.html">JavaScript</a></li>
+                    <li><a href="#About">About</a></li>
+                </ul>
+            </nav>
+            <p>With CSS style, for example, in this project.</p>
+<pre>* {
+    text-decoration: None;
+}</pre>
+            <p>First, we want to get rid of underline for hyperlink, by using the above CSS, we can get rid of all the text-decoration of all elements inlcuding the text-decoration of hyperlink element.</p>
+<pre>header nav ul {
+        margin: 0 auto;/*left-right =auto0 top-bottom=0*/
+        width: fit-content;
+        padding:0;
+    }</pre>
+            <p>
+            The fit-content value of width property allows the &lt;ul&gt; element to be at the center of the &lt;nav&gt; content and with the value of margin, it styles the &lt;ul&gt; element to have automatic left and right margin so that it is always at the middle of the &lt;ul&gt; content.
+            The padding box of &lt;ul&gt; is set to be 0 for top-bottom-left-right so that it is easy to style the layout of &lt;ul&gt; element.
+            </p>  
+<pre>header nav ul li {
+    display:inline-block;
+    list-style:None;
+    padding: 0 10px;
+}</pre>
+            <p>
+                &lt;li&gt; element with inline-block makes the content adjacent. The list-style value is set to be "None" in order to get rid of the bullet point. The padding value makes the top-bottom 0 pixel, and the left-right 10px so that each &lt;ul&gt; elements distance from each other.
+            </p>
+<pre>header nav ul li a {
+    font-family: Arial;
+    text-transform: Uppercase;
+}</pre>
+            <p>All the &lt;a&gt; element has a font content of Arial and all the text content of &lt;a&gt; is tranfromed into uppercase.</p>
+            <p>The result after CSS application is the navigation bar at the top of this project while in mobile version.</p>
+
+       </div>
+        <p>With the development of smart phone, people tend to use mobile for browsing. Therefore, in this project the style for HTML element is responsive for both mobile and desktop version.</p>
+        <p>In the above example of navigation bar, it was designed for mobile version. To make the web page responsive with different screen, <b>@media only screen and (min-width: 1000px)</b> is added to make it respond differently whenever the min-width of the screen is more then 1000px.</p>   
+        <p>Any declared properties inside the above media queries of CSS will only affect only when the mininum width of the device is 1000px.</p>
+        <div class="example">
+            <p>Continute with the navigation bar of this project.</p>
+<pre>
+    header nav ul {
+        margin: 25px 0px; /*making the navigation link bar at the same line*/
+        float:left;
+    }
+    header nav ul li a {
+        line-height:40px;
+}</pre>
+            <p> By including the above CSS style inside the CSS media queries. The &lt;ul&gt; and &lt;a&gt; elements inherit the previous style in combination with the style in this part so that it can act differently in desktop version,</p>
+            <p>From the above CSS style, the top-bottom margin of &lt;ul&gt; element is changed into 25px and the left-right margin is 0px so that it is at the same line with the web page logo. Moreover, setting the float property to the left so that the block content of &lt;ul&gt; is set to be next the logo of the web page.</p>    
+            <p>In the &lt;a&gt; part, the line-height is assgined with the value of 40px which means that the amount of space above and below of inline element (&lt;ul&gt; element is set as inline-block) is assigned so that the area of content of &lt;ul&gt; is 40px.</p>
+</div>
+<hr>
+    <h2 id="5_CSS_Pseudo_class">5.CSS Pseudo class</h2>
+        <p>A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s)</p>
+        <p>The pseudo class is classified by ":" placed after the selector. Pseudo class in CSS allow to style the HTML elements for example: change a button's color when the user's pointer hovers over it or change the color of visited link.</p>
+        <div class="example">
+<pre>
+header nav ul li a:visited{
+    color:#00A0C6;
+}
+header nav ul li a:hover {
+    font-weight: bold;
+    text-shadow: rgb(253, 197, 253) 2px 2px 2px;
+}</pre>
+            <p>The above CSS style in this project, determine the style of anchor tag &lt;a&gt; with pseudo class visited and hover. With the visited class, this defines visited link to have color #00A0C6 (Hexadecimal number that represent color). The hover class, as explained, creates the effect of the content whenever a pointer moves over the link. The links in the navigation bar have a shadow effect of light pink and becomes bolded.</p>
+        </div>
+<p>Beside the pseudo class, there is also pseudo class which is determined by "::" after the selector. It is used to style special part of an element.</p>
+        <div class="example">
+    In this project, the pseudo element of &lt;a&gt; is used to style the bullet point of the list.
+<pre>
+ul.custom_list{
+    list-style: none;
+    
+}
+ul.custom_list li::before {
+    content: "\2022";
+    color:#00A0C6;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    }
+</pre>
+<p>After remove the default bullet point. The before pseudo element is use to create a new bullet point placed before the content of list element.</p>
+<p>Using the content property, we create a new bullet point with "\2022", a CSS entity which define a bullet character in web page, then the bullet is changed to be bold and placed inline with the content of the list element. The width of the boxes around the is created to be 1em so that there is a small gap between the bullet character and the list content. The left side of margin of the bullet character is assigned to be -1em so that it is move to the left side a value of 1em.</p>
+
+        </div>
+    <hr>
+    <h2 id="6_Image_style">6. Image style</h2>
+        <p>For a web site, the image can be an extremely important part that demonstrates the content of the web page. In CSS, images can be styled so that they are responsive and have a good layout to catch the attraction of the user.</p>
+    <div class="example">
+        <p>Using the banner image as the example.</p>
+<pre>.banner img {
+    width: 100%;
+    height: calc(100vh - 90px);
+    opacity: 0.7;
+    object-fit:cover;
+}</pre>
+        <p>The width of the banner is assigned to be 100% so that it is responsive in differents device-width. For the height, a calc() function of CSS is used to calculate the appropriate height so that it fits a whole device screen. Since the header has a height of 90px so that in order to have a full view height of the banner, calc() function is used to calculate the view height from two different types of measure.</p>
+        <p>Opacity is a property that determines how transparent is an image (from 0 to 1.0-default).</p>
+        <p>The value of object-fit property preserves the ratio of the image and focus to cover the center of the image when it is on a small screen device. By this way, it will keep the image responsive.</p>
+    </div>
+    <hr>
+    <h2>7. Browser support</h2>
+        <p>Each browesr supports CSS differently due to its engine, version and many other things.</p>
+        <div class="example">
+            <p>In this project, the &lt;pre&gt; element is defined so that it can break long words and it is also designed to work on older version of browser.</p>
+<pre>pre{
+    white-space: pre-wrap;      /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}</pre>
+            <p>In most case, white-space property will allow long words in &lt;pre&gt; tag to be break in to new line so that it fit in the example container. However, in order to make this work in other version of browsers such as Mozilla since 1999 or Internet Explorer version 5.5+.</p>
+            <p>A few technique of CSS is added in to make sure everything in &lt;pre&gt; tag work well in other version of browser.</p>
+            <p>More information about the support of CSS on browser can be found <a class="link" href="https://www.w3schools.com/cssref/css3_browsersupport.asp">here</a>.</p>
+</div>
+    <hr>
+    <h2>8. Summary</h2>
+        <p>CSS is a very powerful tool that makes the appearance of the web page stunning. In this page, many of the CSS examples are explained and mention to express the power of CSS. However, there is still a lot of aspect of CSS that have not been exploited yet and <a class="link" href="https://www.w3schools.com/">W3 school</a> is the reference web site for more information about CSS.</p>
+
+</section>
+    </div> 
+</main>
+<div class="wrapper">
+    <footer >
+        
+        @2020 Mid Sem Project<br>
+        Daniel Nguyen
+        
+    </footer>
+</div>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+<!--Main Java Script-->
+<script src="../JavaScript/app.js"></script>
+</body>
+</html>

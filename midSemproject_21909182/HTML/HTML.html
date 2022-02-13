@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/style1.css">
+    <title>HTML Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header>
+        <p class="logo" >MidSemProject</p>
+        <nav>
+            <ul>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JS.html">JavaScript</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+            <section class="banner">
+                <img src="../CSS/theme_6.jpg" alt="theme">
+               
+                <h2 class="slider">
+                    WELCOME TO WEB<br>PROJECT
+                </h2>
+            </section>
+            <div class="wrapper">
+                <div class="table_content">
+                    <p>Table of content</p>
+                    <ul>
+                        <li><a href=#1_HTML_background>1. Hypertext Markup Language(HTML) history and evolution </a></li>
+                        <li><a href=#2_HTML_tag_element>2. HTML tag & element</a></li>
+                        <li><a href=#3_HTML_attribute>3. HTML attribute</a></li>
+                        <li><a href=#4_Font_Formatting>4. Font Formatting</a></li>
+                        <li><a href=#5_Summary>5. Summary</a></li>
+                    </ul>
+                </div>
+                <section class="text">
+                    <h2 id="1_HTML_background">1. Hypertext Markup Language(HTML) history and evolution</h2>
+                    <p>In the late 1991, Sir Tim Berners-Lee created his first elementary browsing and authoring system for the Web which was a bunch of baisc hypertext language (HTML) but he did not released officially and then in 1995, this language was published officially as HTML 2.0 and then other version of HTML have been updated to imporve the efficiency of making web page.</p>
+                    <p>HTML is a standard markup language which is a set of Markup tags used for document to be represented in a website and has been evolved with various versions to improve the features of HTML. The implemented features were decided by the Web community over the years in order to allow a much easier and more efficiency way to make a web site.</p>
+                    <ul class="custom_list">
+                        <li>HTML 1.0 was released in 1993 with the intention of sharing information which can be readable and accessible via web browsers. But not much of the developers were involved in creating websites.</li>
+                        <li>Then comes the HTML 2.0, published in 1995; which contains all the features of HTML 1.0 along with that few additional features; which remained as the standard markup language for designing and creating websites until January 1997 and refined various core features of HTML.</li>
+                        <li>Then comes the HTML 3.0, where Dave Raggett who introduced a fresh paper or draft on HTML. It included improved new features of HTML, giving more powerful characteristics for webmasters in designing web pages. But these powerful features of new HTML slowed down the browser in applying further improvements.</li>
+                        <li>Then comes the HTML 4.01 which is widely used and was a successful version of HTML before HTML 5.0, which is currently released and used worldwide. HTML 5 can be said for as an extended version of HTML 4.01 which was published in the year 2012.</li>
+                    </ul>
+                    <hr>
+                    <h2 id="2_HTML_tag_element">2.HTML tag & element</h2>
+                   
+                    <p>HTML tags can be considered as commands incorporated in HTML, which holds the capability to define how a browser will display the content and format of the web page. They are enclosed in angle brackets.
+                    <div class="example"><p >
+                        For example: All HTML documents begin with &lt;!DOCTYPE html&gt; which is inside angle brackets, informs the web browser about the document type. </p> 
+                    </div>
+                    <p>Most HTML elements have two sections: an opening and a closing tag. Moreover,the context of a HTML element which is between the starting tag and ending tag is defined to display in a web page.</p>
+                    <div class="example"><p>The &lt;html&gt;element have &lt;html&gt; tag as the starting tag and &lt;/html&gt; as the ending tag which tells the browser that this is an HTML document and it is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p> </div>
+                    <p>
+                        There are also HTML elements that only have one section (unpaired tag) such as  &lt;!DOCTYPE html&gt; ,  &lt;br&gt;(create a line break in web page without having any content or text) or  &lt;img&gt;(embed an image with a reference to the image resource).
+                    </p>
+                    <div class="example">
+                        <pre>&lt;img src="../CSS/theme_2.jpg" alt="theme"&gt;</pre>
+                        <p>&lt;img&gt; tag in this page is used in order to define an image from a file with the given URL.</p>
+                    </div>
+                    <p>HTML elements can be nested which means elements can be inside other elements before the ending of that element.</p>
+                    <p>In HTML,there are other tags such as &lt;head&gt;, &lt;body&gt; or &lt;p&gt; and they are all nested inside &lt;html&gt; tag </p>
+                    <div class="example">   
+<pre>&lt;html&gt;
+    &lt;body&gt;
+        &lt;p&gt;Result: like what were build in this &lt;b&gt;website&lt;/b&gt; &lt;/p&gt;
+    &lt;/body&gt; 
+&lt;/html&gt;
+</pre>       
+                        <p>Result: like what were build in this <b>website</b></p>
+                        <p>The tag &lt;body&gt; which difines a page content is placed inside &lt;html&gt; </p>
+                        <p>The &lt;b&gt; tag is nested inside a &lt;p&gt; tag to make the content "<b>website</b>" become bold by the &lt;b&gt; element.</p>
+                    </div>
+                    <p>In HTML, there are many tags for web developers to explore and make their website efficiency. In this project, a navigation tag (&lt;nav&gt;) and a unordered list tag (&lt;ul&gt;) are used in order to make a navigation bar at the top of this web project.</p>    
+                    <div class="example">      
+<pre>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;HTML.html&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;CSS.html&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;JavaScript.html&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;About.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</pre>   
+                        <p>A (&lt;nav&gt;) block is used to contain an unordered list (&lt;ul&gt;) of URL links which is included by anchor tag (&lt;a&gt;) so that the web page will render "HTML" as a hyperlink. With appropriate CSS (explained in <a class="link" href="CSS.html">this link</a>),this is presented as a navigation bar to other web pages.</p>
+                    </div>
+                <hr>
+                    <h2 id="3_HTML_attribute">3. HTML attribute</h2>
+                        <p>Most of the attributes of an element are name-value pairs, separated by = and written within the start tag of an element after the element's name. The value may be enclosed in single or double quotes. Attributes provide additional information about HTML elements.</p>
+                        <div class="example">
+                            <p>Given the image tag example above:</p>
+                            <pre>&lt;img src="../CSS/theme_2.jpg" alt="theme"&gt; </pre>
+                            <p> "src" attribute in this tag provide the resource of image and "alt" attribute define an alternative name of the image whenever the image is unavailabe.</p>
+                            <p> Or in the narvigation bar above.</p>
+                            <pre>&lt;li&gt;&lt;a href=&quot;HTML.html&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;</pre>
+                            <p> href attribute provides the link target (HTML.html) and then the content is render as a hyperlink to that target link.</p>
+                            <p> Note: Those links above is known as relative links</p>
+                        </div>
+                        <p>HTML attribute can be use to provide some style with "style" attribute in HTML which determine some CSS for a element. The syntax of style attribute follow CSS syntax.</p>
+                        <div class="example">
+                            With this following HTML code:<br>
+                            <pre>&lt;p style = &quot;color:maroon;font-size:25px&quot; &gt; Result: This text is style with style attribute&lt;/p&gt;</pre>
+                            <p style="color:maroon;font-size:25px">Result: This text is style with style attribute</p>
+                            <p>
+                                The style attribute above is declared to make the content of that specific &lt;p&gt; element has maroon color for the text and a font-size of 25px.
+                            </p>
+                        </div>
+                        <p>Beside of above attributes there is also class and id attribute which give name to one or more HTML elements. With this attribute, CSS and JavaScript can perform their tasks on specific elements using class name( more on <a class="link" href="CSS.html" >CSS</a>&<a class="link" href="JS.html" >JavaScript</a>).</P>
+                        <div class="example">
+<pre>&lt;div class=&quot;example&quot;&gt;...&lt;div&gt;</pre>
+                        <p>All the example boxes in this project is defined a class name of "example". And this "example" element is style in CSS file to have a blue-purple rectangle for this web project.</p>
+                        </div>
+                    <hr>
+                    <h2 id="4_Font_Formatting">4. Font Formatting</h2>
+                    <p>Despite the style attribute in HTML, font in HTML can be formatted by HMTL elements.Formatting elements were designed to display special types of text:</p>
+                    <ul>
+                        <li>&lt;b&gt; - Bold text</li>
+                        <li>&lt;strong&gt; - Important text</li>
+                        <li>&lt;i&gt; - Italic text</li>
+                        <li>&lt;em&gt; - Emphasized text</li>
+                        <li>&lt;mark&gt; - Marked text</li>
+                        <li>&lt;small&gt; - Small text</li>
+                        <li>&lt;del&gt; - Deleted text</li>
+                        <li>&lt;ins&gt; - Inserted text</li>
+                        <li>&lt;sub&gt; - Subscript text</li>
+                        <li>&lt;sup&gt; - Superscript text</li>
+                    </ul>
+                    <div class="example">
+                        <p>By adding &lt;b&gt; tag and its content will become bolded for example.</p>
+                        <pre>&lt;p&gt;This text is &lt;b&gt;bolded&lt;/b&gt;.&lt;/p&gt;</pre>
+                        <p>This text is <b>bolded</b>.</p>
+                        <p>Or use &lt;i&gt; to make the text italicized.</p>
+                        <pre>&lt;p&gt;This text is &lt;i&gt;italicized&lt;/i&gt;.&lt;/p&gt;</pre>
+                        <p>This text is <i>italicized</i>.</p>
+                    </div>
+                <hr>
+                    <h2 id="5_Summary">5. Summary.</h2>
+                    <p>HTML is a very simple markup language that allows everyone to add content into a web page. In this page, many of the HTML examples are explained and mentioned to demonstrate how diffent contents is added in HTML page so that browsers can display. However, many features of HTML that have not been mentioned yet and <a class="link" href="https://www.w3schools.com/">W3 school</a> is the reference web site for more information about HTML.</p>
+            </section>
+            </div> 
+        </main>
+        <div class="wrapper">
+            <footer >
+                
+                @2020 Mid Sem Project<br>
+                Daniel Nguyen
+                
+            </footer>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+    
+    <script src="../JavaScript/app.js"></script>
+</body>
+</html>

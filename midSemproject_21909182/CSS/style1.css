@@ -1,0 +1,243 @@
+/*set everything to none so that we can use our style*/
+*{
+    text-decoration:None;
+}
+body{
+    font-family: "Century Gothic";
+    font-size: 110%;
+    margin:0;
+    padding:0;
+}
+p {
+    font-family:Century Gothic;
+}
+/***HEADER***/
+header {
+    width:100%;
+    height:90px;/*making the height of the header is 90px and remember it for later figure of margin*/
+}
+header p.logo {
+    /*By default (without setting a width) they take up as much horizontal space as they can.*/
+    display:block; /*making all the link as block element for easier styling*/
+    text-align: center;/*dun know why but seem like the text-align does not affect anything at all*/
+    padding:5px 0px; /*making the logo in a margin-box of 10x20 px*/
+    margin:0;
+    line-height:30px;
+    font-size:24px;
+    font-weight: 900;
+    font-family: Arial;
+}
+.custom_list li{
+    padding: 3px;
+}
+ul.custom_list{
+    list-style: none;
+}
+/*insert inside and before the conent pf the*/
+/*:: mean pseudo element*/
+ul.custom_list li::before {
+    content: "\2022";/*bullet point*/
+    color:#00A0C6;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
+/*the order is matter */
+header nav ul li a {
+    color:#00A0C6;
+}
+/*: mean pseudoclass*/
+header nav ul li a:visited{
+    color:#00A0C6;
+}
+header nav ul li a:hover {
+    font-weight: bold;
+    text-shadow: rgb(253, 197, 253) 2px 2px 2px;/*horizontal distanc, vertical distance,Blur radius, color shadow*/
+}
+/*navigation tag-list element*/
+header nav ul {
+    margin: 0 auto; /*left-right = 0 top-bottom=auto*/
+    width: fit-content;
+    width: -webkit-fit-content;/*for edge*/
+    width: -moz-fit-content;/*for firefox*/
+    display:table;/*added later, it work well in edge, opera and chroma*/
+    padding:0;
+}
+/*making the navigation bar list in the header*/
+header nav ul li {
+    display:inline-block;/*list item will inline with eachother*/
+    list-style:None;
+    padding:0 10px;
+    
+}
+/*link inside the list item*/
+header nav ul li a {
+    font-family: Arial;
+    text-transform: Uppercase;
+    
+}
+/***MAIN***/
+.banner{
+    position: relative;/*so that the h2 in banner have absolute position inside this position-relative to "banner" parent*/
+    /*margin-top:90px;*/
+}
+.banner img {
+    width: 100%;
+    height: calc(100vh - 90px);/*adjust the figure to have smaller image*/
+    opacity: 0.7;
+    object-fit:cover;
+}
+.banner h2{
+    position: absolute;/*inside the banner img which position relative*/
+    top: 35%;
+    left:50%;
+    transform: translate(-50%, -15%);/* Centered text over themeb image*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:800;
+    font-size:50px;
+    text-align: center;
+    text-shadow: rgb(255, 187, 0) -1px 0px 20px;
+    /*text-shadow:-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;*/
+    color:rgb(15, 15, 94);
+    padding:0px 20px;
+}
+.banner h1{
+    padding:0 20px;
+}
+hr{
+    border: 1px solid;
+}
+.table_content{
+    background-image: linear-gradient(to bottom right, rgb(248, 233, 145), rgb(206, 245, 245));
+    padding:5px;
+    border-left: 3px solid rgb(126, 18, 197);
+    border-radius:5px;
+}
+.table_content p{
+    font-weight: bold;
+    text-align: center;
+}
+.table_content a{
+    color:rgb(15, 15, 94);
+}
+.table_content a:visited{
+    color:rgb(15, 15, 94);
+}
+.table_content a:hover{
+    font-weight: bold;
+}
+a.link {
+    color:rgb(255, 61, 61);
+    font-weight: bolder;
+}
+a.link:hover{
+    color:rgb(0, 131, 238);
+}
+.text {
+    padding:0 10px;
+}
+.example {
+    border-left: 3px solid rgb(126, 18, 197);
+    background-image: linear-gradient(to bottom right, rgba(145, 252, 252, 0.712), rgb(208, 166, 248));
+    padding:10px;
+    border-radius: 5px;
+    margin-bottom:15px;
+}
+.example ul a{
+    text-decoration: underline;
+}
+pre{
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+li{
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+h1{
+    color:navy;
+}
+
+.button{
+    font-family:"Century Gothic";
+    font-weight: bold;
+    border:0;
+    border-radius: 5px;
+    padding:5px;
+}
+input#BGcolor{
+    border-radius: 5px;
+    padding:5px;
+}
+.button:hover{
+    color:white;
+    background-color: rgb(102, 99, 99);
+}
+.image_container{
+    background-image: linear-gradient(to bottom, rgb(90, 93, 247), rgb(248, 166, 244));
+    padding:10px;
+    
+}
+.image_container p {
+    text-align: center;
+    color:rgb(253, 253, 253);
+    font-weight: bold;
+    font-size:24px;
+    margin:0 0 10px 0px;
+}
+.image_container a img {
+    width:100%;
+    margin: auto;
+    display:block;
+}
+.profile_container{
+    text-align: center;
+}
+
+/***FOOTER***/
+footer {
+    padding: 20px 20px;
+    /*background-color: rgb(37, 36, 36);*/
+    background-image: linear-gradient(to bottom right, rgba(104, 102, 102, 0.712), rgb(0, 0, 0));
+    margin-top:30px;
+    color:white;
+    text-align: center;
+}
+/*style for different bigger screen deveices*/
+@media only screen and (min-width: 1000px) {
+    .text{
+        padding:0px;
+    }
+    
+    .wrapper {
+        width: 850px;
+        margin: 0 auto;
+    }
+    header p.logo {
+        text-align: left;/*dun know why but seem like the text-align does not affect anything at all*/
+        margin:20px 20px; /*making the logo in a margin-box of 10x20 px*/
+        padding: 0px 20px 0px 30px;/*dun want padding on the left side*/
+        border-right: 2px solid black;
+        float: left;
+        line-height:50px;
+        font-weight: 1000;
+    }
+    /*navigation tag-list element*/
+    header nav ul {
+        margin: 25px 0px; /*making the navigation link bar at the same line*/
+        float:left;
+    }
+/*links inside the list item*/
+    header nav ul li a {
+        line-height:40px;
+        overflow: hidden;
+}
+    .example {
+        margin-left:40px;
+}
+}

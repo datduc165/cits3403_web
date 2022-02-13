@@ -1,0 +1,1 @@
+installed python-dotenv for importing flask_app but for now (05/may/2020), dun know how to use>>>> might delete later on

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITS3403-Base</title>
+</head>
+<body>
+    <div id="nav_bar">
+        <h2>Menu: <a href="{{ url_for('blog') }}">BLoG =3= </a> 
+            <a href="{{ url_for('home') }}">Home TT.TT</a>
+            <a href="{{ url_for('signup') }}">Sign Up TT.TT</a>
+        </h2>
+    </div>
+    {%block content %}{% endblock %}
+</body>
+</html>
